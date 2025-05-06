@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+  <section id="Home">
+  <header class="header">
+    <nav class="custom-navbar">
+        <div class="logo">Shudhanshu<span class="dot">.</span></div>
+        <button class="hamburger" id="hamburger">
+            ☰
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#Home" class="active">Home</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Projects">Projects</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
+</section>
+
+<!-- Hero Section Bio  -->
+
+  <div class="hero-section">
+    <!-- Text Content (Left Side) -->
+    <div class="hero-text">
+      <h1>Shudhanshu Patel <span class="highlight">Web Developer</span></h1>
+      <p class="tagline">I can design the website as per your requirement</p>
+      
+      <div class="services">
+        <p>I specialize in:</p>
+        <ul>
+          <li><strong>Landing</strong> websites</li>
+          <li><strong>Business Portfolio</strong> websites</li>
+          <li><strong>Shopping</strong> stores</li>
+          <li><strong>Introduction Pages</strong></li>
+        </ul>
+        <p class="conversion">Figma & PSD to <strong>responsive HTML</strong></p>
+      </div>
+      
+      <div class="cta-buttons">
+        <a href="#contact" class="btn hire-btn">Hire Me →</a>
+        <a href="#contact" class="btn outline-btn">Let's Talk →</a>
+      </div>
+    </div>
+    
+    <!-- Image (Right Side) -->
+    <div class="hero-image">
+      <img src="Image/image.avif" alt="Web Designer at Work">
+    </div>
+  </div>
+
+  
+<section id="About">
+  <div class="about-container">
+    <div class="image-section">
+      <img src="Image/personal.JPG" alt="Shudhanshu Patel">
+    </div>
+    <div class="content-section">
+      <h1>About Me</h1>
+      <p>
+        I'm a passionate ReactJS Developer with 1 year of hands-on experience building dynamic and responsive web applications. I specialize in crafting user-friendly interfaces using React, JavaScript, HTML, and CSS, with a strong understanding of component-based architecture, hooks, and modern web design principles. I'm comfortable working in fast-paced environments, collaborating with teams, and turning complex requirements into clean, maintainable code. I'm always eager to learn new technologies and improve my development workflow.
+      </p>
+
+      <div class="tabs">
+        <button class="tab active" onclick="showTab('skills')">Skills</button>
+        <button class="tab" onclick="showTab('experience')">Experience</button>
+        <button class="tab" onclick="showTab('education')">Education</button>
+      </div>
+
+      <div class="tab-content active" id="skills">
+        <p><span class="highlight">Frontend Development</span><br>Designing any type of website</p>
+        <p><span class="highlight">Web Development</span><br>HTML, CSS, JavaScript, ReactJs</p>
+        <p><span class="highlight">Addtional Skills</span><br>C Programming, C++, SQL</p>
+      </div>
+      <div class="tab-content" id="experience">
+        <p><span class="highlight">ReactJs Developer</span><br>(March-2024 - March-2025)</p>
+
+      </div>
+      <div class="tab-content" id="education">
+        <p><span class="highlight">HighSchool (2016)</span><br>Happy Model School<br>8.6 CGPA</p>
+        <p><span class="highlight">Intermediate (2018)</span><br>Happy Model School<br>62% CGPA</p>
+        <p><span class="highlight">BCA (2022)</span><br>Rajarshi School of Management & Technology <br>70%</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Project Section -->
+
+<section class="projects-section" id="Projects">
+    <h2>My Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card" onclick="openModal('Image/Swiggy.png', 'Swiggy Clone', '<h3>A proper Swiggy clone with all the features.</h3><br><strong>Technology Used</strong>: HTML, CSS, JavaScript, ReactJs.<br>Used many API calls from different databases.<br><b><u>GitHub Link : </u></b><a href=\'https://github.com/shudhanshupatel1999/Food_delivery\' target=\'_blank\'>Visit Repository</a> <br><br><b><u>Video Link : </u></b><a href=\'https://www.linkedin.com/feed/update/urn:li:activity:7309283537415720960\' target=\'_blank\'>  Visit Video</a>')">
+            <h3>Swiggy Clone</h3>
+            <p>It is a Proper Swiggy clone where we are fetching data from Swiggy API and using it for the different puroposes.<br>Implemented seach feature from the list of the cusines and restorents to find the desired items.</p>
+          </div>
+      <div class="project-card" onclick="openModal('Image/netflix.jpg', 'Netflix Clone', '<h3>A proper Netflix clone with all the features.</h3><br><strong>Technology Used</strong>: HTML, CSS, JavaScript, ReactJs.<br>Used many API calls from different databases.<br><b><u>GitHub Link : </u></b><a href=\'https://github.com/shudhanshupatel1999/Netflix-GPT\' target=\'_blank\'>Visit Repository</a><br> <br><b><u>Video Link : </u></b><a href=\'https://www.linkedin.com/feed/update/urn:li:activity:7313833612989145088/\' target=\'_blank\'>  Visit Video</a>')">
+        <h3>Netflix Clone</h3>
+        <p><ul><li>Fetching data from netflix API and using it for the different puroposes.</li><li>Used TMDB database API to fetch data and display the movies.</li><li>Implemented Regx for Login and SignUP.</li></ul></p>
+      </div>
+      <div class="project-card" onclick="openModal('Image/varanasi.jpg', 'Varanasi Broker', '<h3>It is the proper landing page with the data related to the broker.</h3><br><strong>Technology Used</strong>: HTML, CSS, JavaScript.<br>Used many API calls from different databases.<br><b><u>GitHub Link : </u></b><a href=\'https://github.com/shudhanshupatel1999/Varanasi-broker\' target=\'_blank\'>Visit Repository</a>')">
+        <h3>Varanasi Broket</h3>
+        <p>Search and discover new propty in Varanasi and realted areas and browse between many properties.</p>
+      </div>
+      <div class="project-card" onclick="openModal('Image/Portfolio.webp', 'Portfolio', '<h3>It is a simple Portfolio website where developer can shocase there skills.</h3><br><strong>Technology Used</strong>: HTML, CSS, JavaScript.<br><b><u>GitHub Link : </u></b><a href=\'https://github.com/shudhanshupatel1999/Varanasi-broker\' target=\'_blank\'>Visit Repository</a>')">
+        <h3>Portfolio</h3>
+        <p>It is a simple website where developer can showcase there skills.</p>
+      </div>
+  </section>
+  
+  <!-- Modal -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3 id="modalTitle"></h3>
+      <img id="modalImage" src="" alt="Project Image" />
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+  
+
+<!-- contact section -->
+
+  <section id="contact">
+  <div class="contact-section" id="Contact">
+    <div class="contact-left">
+      <h2>Contact Me</h2>
+      <p><i class="fa-solid fa-paper-plane"></i> github.com/shudhanshu-patel-1999</p>
+      <p><i class="fa-solid fa-phone"></i> +91 9305939051</p>
+  
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/shudhanshu-patel-1ab933169/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/shudhanshupatel1999" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  
+    <div class="contact-right">
+      <form id="contact-form">
+        <div class="form-row">
+          <input id="name" type="text" placeholder="Your Name" required>
+          <input id="email" type="email" placeholder="Your Email" required>
+        </div>
+        <textarea id="message" placeholder="Your Message" rows="6" required></textarea>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Toggle change theme section -->
+
+  <div class="theme-toggle-wrapper">
+    <span class="label">AM</span>
+    <label class="theme-switch">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider">
+        <span class="icon"></span>
+      </span>
+    </label>
+    <span class="label">PM</span>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+
+</html>
