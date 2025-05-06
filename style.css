@@ -531,7 +531,7 @@ textarea {
   }
 }
 
-/* Theme Toggle */
+/* Theme Toggle
 .theme-toggle-wrapper {
   display: flex;
   align-items: center;
@@ -620,5 +620,82 @@ body.dark-mode {
 }
 
 .dark a:hover {
+  color: #fff;
+} */
+
+
+
+
+
+
+/* Toggle  */
+
+.theme-toggle-wrapper {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* Changed from right to left */
+  display: flex;
+  align-items: center;
+  background: #f0f0f0;
+  padding: 10px 16px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+
+/* Optional styling for the switch and labels */
+.label {
+  margin: 0 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 26px;
+  transition: 0.4s;
+}
+
+.slider .icon {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #007BFF;
+}
+
+input:checked + .slider .icon {
+  transform: translateX(24px);
+}
+
+body.dark-theme {
+  background: #111;
   color: #fff;
 }

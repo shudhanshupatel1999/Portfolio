@@ -96,9 +96,30 @@ document.addEventListener("DOMContentLoaded", function () {
 const themeToggle = document.getElementById('theme-toggle');
 
 // Toggle Theme on checkbox change
-themeToggle.addEventListener('change', () => {
-  document.body.classList.toggle('dark-mode', themeToggle.checked);
-});
+
+// themeToggle.addEventListener('change', () => {
+//   document.body.classList.toggle('dark-mode', themeToggle.checked);
+// });
+
+
+const toggle = document.getElementById('theme-toggle');
+
+  // Set theme on page load
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+    toggle.checked = true;
+  }
+
+  // Toggle theme and save to localStorage
+  toggle.onchange = () => {
+    if (toggle.checked) {
+      document.body.classList.add('dark-theme');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.remove('dark-theme');
+      localStorage.setItem('theme', 'light');
+    }
+  };
 
 
 
