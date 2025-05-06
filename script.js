@@ -8,6 +8,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Dev image
+const grid = document.querySelector('.hero-image-grid');
+const rows = 10;
+const cols = 10;
+
+for (let row = 0; row < rows; row++) {
+  for (let col = 0; col < cols; col++) {
+    const tile = document.createElement('div');
+    tile.classList.add('hero-image-tile');
+    tile.style.backgroundPosition = `${(col / (cols - 1)) * 100}% ${(row / (rows - 1)) * 100}%`;
+    tile.style.animationDelay = `${(row + col) * 50}ms`; // Staggered delay
+    grid.appendChild(tile);
+  }
+}
 
 // Navigate between the education experience and skills
 function showTab(tabId) {
@@ -122,4 +136,19 @@ const toggle = document.getElementById('theme-toggle');
   };
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // Profile image
 
